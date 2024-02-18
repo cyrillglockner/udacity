@@ -1,19 +1,20 @@
 # Project Files Description
 
 ## `gptmodel.py`
-Illustrates training and evaluating a distilibert model on the IMDb dataset, focusing on data loading, model configuration, training process, and performance metrics evaluation.
+Training and evaluating a distilibert model on the IMDb dataset.
 
 ## `lora.py`
-Demonstrates training a distilbert model with Low-Rank Adaptation (LoRA) on the IMDb dataset. It showcases data preprocessing, LoRA configuration, model training, and evaluation.
+Taining a distilbert model with Low-Rank Adaptation (LoRA) on the IMDb dataset.
 
 ## `compare.py`
-Script for evaluating and comparing the performance of baseline and LoRA fine-tuned models on the IMDb dataset. It calculates accuracy and inference times.
+Script for evaluating and comparing the performance of baseline and LoRA fine-tuned models on the IMDb dataset.
 
 ## `predict.py`
-Generates sentiment predictions for input text samples.
+Generates sentiment predictions for input text samples and stores results in two csv files.
 
 ## `requirements.txt`
-Lists essential Python packages (torch, transformers, datasets, pandas, numpy) required for running the project. Use `pip install -r requirements.txt` to install dependencies.
+Essential Python packages (torch, transformers, datasets, pandas, numpy) required for running the project. 
+Use `pip install -r requirements.txt` to install dependencies.
 
 
 # Known Issues
