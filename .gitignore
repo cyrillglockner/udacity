@@ -1,9 +1,11 @@
 # Ignore everything
 *
 
-# But not these files...
-!.gitignore # Don't ignore the .gitignore file itself
-!*.py       # Allow Python files
-!*.txt      # Allow text files
-!*.md       # Allow Markdown files
+# Don't ignore the .gitignore file itself
+!.gitignore
+
+# Allow Python files, Text files, and Markdown files
+!*.py
+!*.txt
+!*.md
 
