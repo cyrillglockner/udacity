@@ -4,3 +4,4 @@ datasets
 pandas
 numpy
 scikit-learn
+peft
