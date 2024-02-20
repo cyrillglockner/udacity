@@ -65,7 +65,7 @@ lora_identifier = "lora"
 # Evaluate baseline model without LoRA configurations
 baseline_accuracy, baseline_time = evaluate_with_trainer("./default_model/", baseline_identifier, test_dataset, apply_lora=False)
 # Evaluate LoRA model with LoRA configurations applied
-lora_accuracy, lora_time = evaluate_with_trainer("./results_lora/checkpoint-2000/", lora_identifier, test_dataset, apply_lora=True)
+lora_accuracy, lora_time = evaluate_with_trainer("./fine_tuned_model/", lora_identifier, test_dataset, apply_lora=True)
 
 print(f"Baseline Model Accuracy: {baseline_accuracy:.4f}, Inference Time: {baseline_time:.2f} seconds")
 print(f"LoRA Model Accuracy: {lora_accuracy:.4f}, Inference Time: {lora_time:.2f} seconds")
