@@ -41,4 +41,4 @@ def predict_and_save(model_path, output_file):
 predict_and_save("./default_model/", "default_model_predicted_sentiments.csv")
 
 # Predict and save results for the LoRA model continued
-predict_and_save("./results_lora/checkpoint-2000/", "lora_model_predicted_sentiments.csv")
+predict_and_save("./fine_tuned_model/", "lora_model_predicted_sentiments.csv")
