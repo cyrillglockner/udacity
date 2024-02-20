@@ -23,4 +23,18 @@ warnings about "Some weights of DistilBertForSequenceClassification were not ini
 
 Do not seem to influence the model performance
 
+# Steps to use the repo
+
+## Execute in order
+pip install -r requirements.txt
+
+python gptmodel.py 
+
+python lora.py
+
+python conmpare.py
+
+python predict.py 
+
+
 

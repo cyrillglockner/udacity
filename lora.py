@@ -167,7 +167,7 @@ evaluation = trainer.evaluate()
 print("Evaluation metrics:", evaluation)
 
 
-model.save_pretrained("./fine_tuned_model/")
+lora_model.save_pretrained("./fine_tuned_model/")
 
 ### In case you want to keep training ###
 '''
@@ -178,7 +178,7 @@ lora_model = AutoModelForSequenceClassification.from_pretrained("./fine_tuned_mo
 
 # Define the Trainer with the previously trained LoRA model
 training_args = TrainingArguments(
-    output_dir='./results_lo_ra_continued/',  # Change to a new directory to save the continued training results
+    output_dir='./results_lora_continued/',  # Change to a new directory to save the continued training results
     evaluation_strategy='epoch',
     num_train_epochs=1,  # Adjust epochs depending on how much more you want to train
     per_device_train_batch_size=8,
