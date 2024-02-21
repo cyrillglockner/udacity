@@ -27,7 +27,7 @@ dataset["train"][1]
 
 # Tokenize dataset
 
-from transformers import BertForSequenceClassification, AutoTokenizer, Trainer, TrainingArguments
+from transformers import AutoTokenizer, Trainer, TrainingArguments
 
 # Load the BERT tokenizer
 tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
@@ -68,7 +68,6 @@ for param in model.parameters():
 
 
 # Preparing LoRA configuration
-from transformers import AutoModelForSequenceClassification
 from peft import LoraModel, LoraConfig, TaskType
 
 target_modules = [
@@ -78,8 +77,8 @@ target_modules = [
     "distilbert.transformer.layer.1.attention.q_lin",  # Query in the second layer
     "distilbert.transformer.layer.1.attention.v_lin",  # Value in the second layer
     "distilbert.transformer.layer.1.attention.out_lin",  # Attention output for the second layer
-    "distilbert.transformer.layer.1.ffn.lin1",  # First linear layer of the FFN for the second layer
-    "distilbert.transformer.layer.1.ffn.lin2",  # Second linear layer of the FFN for the second layer
+    #"distilbert.transformer.layer.1.ffn.lin1",  # First linear layer of the FFN for the second layer
+    #"distilbert.transformer.layer.1.ffn.lin2",  # Second linear layer of the FFN for the second layer
 ]
 
 config = LoraConfig(
@@ -135,7 +134,7 @@ eval_dataset = MyDataset(tokenized_dataset, 'test')
 training_args = TrainingArguments(
     output_dir='./results_lora/',
     evaluation_strategy='epoch',
-    num_train_epochs=3,
+    num_train_epochs=4,
     per_device_train_batch_size=8,
     per_device_eval_batch_size=16,
     warmup_steps=500,
