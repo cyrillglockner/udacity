@@ -59,8 +59,8 @@ def evaluate_with_trainer(model_path, model_identifier, test_dataset, apply_lora
     return results.get('eval_accuracy', None), inference_time
 
 # Define clear model identifiers
-baseline_identifier = "baseline"
-lora_identifier = "lora"
+baseline_identifier = "default_model"
+lora_identifier = "fine_tuned_model"
 
 # Evaluate baseline model without LoRA configurations
 baseline_accuracy, baseline_time = evaluate_with_trainer("./default_model/", baseline_identifier, test_dataset, apply_lora=False)

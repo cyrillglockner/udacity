@@ -10,7 +10,7 @@ Taining a distilbert model with Low-Rank Adaptation (LoRA) on the IMDb dataset.
 Script for evaluating and comparing the performance of baseline and LoRA fine-tuned models on the IMDb dataset.
 
 ## `predict.py`
-Generates sentiment predictions for input text samples and stores results in two csv files.
+Generates sentiment predictions for input text samples and stores results in two csv files. Updated to use 'AutoPeftModelForSequenceClassification'
 
 ## `requirements.txt`
 Essential Python packages (torch, transformers, datasets, pandas, numpy) required for running the project. 
