@@ -32,7 +32,7 @@ python gptmodel.py
 
 python lora.py
 
-python conmpare.py
+python compare.py
 
 python predict.py 
 
